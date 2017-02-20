@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../static/styles/styles.css">
+	<title>Movie Database</title>
+</head>
+<body>
+
+	<h1>Movie Database</h1>
+
+	<form action="{{ url_for('search') }}" method="GET">
+	    <h3>Search if a movie is in the database (enter the name):</h3>
+	    <input type="text" name="name" />
+	    <input type="submit" />
+	</form>
+	<hr>
+
+	<form action = "{{ url_for('movie') }}" method = "POST">
+	<h3>Add a movie to the database</h3>
+	Title:
+	<input type = "text" name = "title" /></br>
+	Year
+    <input type = "text" name = "year" /></br>
+    Genre
+    <input type = "text" name = "name" /></br>
+    Director
+    <input type = "text" name = "name" /></br>
+	<input type = "submit" value = "submit" /><br>
+	</form>
+	<hr>
+	<h3>Movies in the database</h3>
+	<a href="/movies">List Movies</a> - see the list of movies in the database</p>
+	<br>
+	<br>
+	<br>
+	<p>And that's about it right now</p>
+
+</body>
+</html>
